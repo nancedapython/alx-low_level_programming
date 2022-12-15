@@ -15,10 +15,10 @@ i = 0;
 /*
 *while (i < 10)
 *{
+*infinite loop: i doesn't increase
 *putchar(i);
 *} 
 */
 printf("infinite loop avoided! \\o/\n");
-
 return (0);
 }
