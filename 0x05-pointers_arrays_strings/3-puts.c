@@ -2,7 +2,8 @@
 
 /**
  * _puts - prints a string
- * @str: value to be entered
+ * @str: the string
+ * Return: length of string
  */
 
 void _puts(char *str)
