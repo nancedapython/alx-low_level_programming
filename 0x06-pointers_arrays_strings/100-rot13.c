@@ -1,26 +1,30 @@
-#include "main.h"
+nclude "main.h"
 
 /**
- * rot13 - converts string to leet
- * @c: character string pointer
- * Return: char pointer
+ * rot13 - encrypts code
+ * @s: string to encrypt
+ * Return: char value
  */
 
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	int i, j;
-	char rot_13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm",
-	     alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	for (i = 0; c[i] != '\0'; i++)
+	char part1[52] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char part2[52] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+
+	int i;
+	int j = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; part1[j] != '\0'; j++)
 		{
-			if (alphabet[j] == c[i])
+			if (s[i] == part1[j])
 			{
-				c[i] = rot_13[j];
+				s[i] = part2[j];
 				break;
 			}
 		}
 	}
-	return (c);
+
+	return (s);
 }
