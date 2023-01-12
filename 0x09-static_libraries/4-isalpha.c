@@ -1,24 +1,18 @@
 #include "main.h"
 
 /**
- * _strpbrk - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _isalpha - main function
+ *
+ * @c: character to compare
+ *
+ * Return: 1 if true, 0 if false
+ *
  */
-
-char *_strpbrk(char *s, char *accept)
+int _isalpha(int c)
 {
-	int k;
-
-	while (*s)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		for (k = 0; accept[k]; k++)
-		{
-			if (*s == accept[k])
-				return (s);
-		}
-		s++;
+		return (1);
 	}
-	return ('\0');
+	return (0);
 }

@@ -1,10 +1,18 @@
 #include "main.h"
-#include<stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include "2-strlen.c"
 
-void _put(char *s)
+/**
+ * _puts - puts a string
+ *
+ * @str: string to print
+ */
+void _puts(char *str)
 {
-	puts(s);
+	int i;
+
+	for (i = 0; *(str + i) != '\0'; i++)
+	{
+		_putchar(*(str + i));
+	}
+	_putchar('\n');
 }
