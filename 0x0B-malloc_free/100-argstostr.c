@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
  * argstostr - concatenates all the arguments of a program.
  * @ac: argument count.
@@ -22,8 +24,7 @@ char *argstostr(int ac, char **av)
 		c++;
 	}
 
-	aout = malloc((c + 1) * sizeof(char));
-
+	aout = malloc((c + 1) *sizeof(char));
 	if (aout == NULL)
 	{
 		free(aout);
